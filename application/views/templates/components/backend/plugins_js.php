@@ -61,10 +61,6 @@ altair_wysiwyg = {
 <script src="<?php echo base_url().$this->data['asbackbower']; ?>countUp.js/dist/countUp.min.js"></script>
 
 <script src="<?php echo base_url().$this->data['asback']; ?>js/pages/dashboard.min.js"></script>
-<?php
-} elseif($plugins == 'plugins_deposit') {
-?>
-<?php echo $datatables;?>
 
 <?php
 } elseif($plugins == 'plugins_user') {
@@ -219,20 +215,6 @@ altair_form_adv = {
     }
 };
 </script>
-<?php
-} elseif($plugins == 'plugins_order') { 
-?>
-<?php echo $datatables;?>
-
-<!-- chartist (charts) -->
-<script src="<?php echo base_url().$this->data['asbackbower']; ?>chartist/dist/chartist.min.js"></script>
-<!-- peity (small charts) -->
-<script src="<?php echo base_url().$this->data['asbackbower']; ?>peity/jquery.peity.min.js"></script>
-<!-- easy-pie-chart (circular statistics) -->
-<script src="<?php echo base_url().$this->data['asbackbower']; ?>jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-<!-- countUp -->
-<script src="<?php echo base_url().$this->data['asbackbower']; ?>countUp.js/countUp.js"></script>
-<script src="<?php echo base_url().$this->data['asback'];?>js/pages/dashboard.min.js"></script>
 
 <?php                   
 }
