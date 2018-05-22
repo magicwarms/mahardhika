@@ -1,0 +1,15 @@
+/* Add here all your CSS customizations */
+.mockup-landing-page {
+    margin-top: 0 !important;
+}
+.feature-box.reverse {
+    text-align: left;
+    flex-direction: row-reverse;
+}
+html .call-to-action.call-to-action-primary {
+    background: #848484;
+}
+.container.tour-home {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
