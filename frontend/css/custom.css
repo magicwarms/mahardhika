@@ -23,3 +23,31 @@ section.section.section-with-mockup {
 .container.tour-home {
     margin-top: 60px;
 }
+#header .header-body{
+	background: #fff0;
+}
+html #header.header-semi-transparent .header-nav-main nav > ul > li > a.active {
+    color: none;
+}
+html #header.header-semi-transparent .header-nav-main nav > ul > li > a.active {
+    color: none;
+}
+#header .header-nav-main nav > ul > li > a.active{
+	color: none;
+}
+#header .header-nav-main nav > ul > li > a.active {
+    background: none;
+}
+.nav-pills > li.active > a, .nav-pills .nav-link.active {
+    background-color: none;
+}
+html #header.header-transparent-bottom-border .header-body {
+    border-bottom: none;
+}
+.col-12.col-sm-6.col-lg-4.car-rent {
+    margin-bottom: 20px !important;
+}
+html section.section-primary {
+    background-color: #b9b9b9 !important;
+    border-color: #4a4a4a !important;
+}
