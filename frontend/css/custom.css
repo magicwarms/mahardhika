@@ -8,8 +8,18 @@
 }
 html .call-to-action.call-to-action-primary {
     background: #848484;
+    padding: 10px;
 }
 .container.tour-home {
     margin-top: 100px;
     margin-bottom: 80px;
+}
+html .testimonial-primary blockquote {
+    background: #6d6d6ddb;
+}
+section.section.section-with-mockup {
+    margin-top: 35px;
+}
+.container.tour-home {
+    margin-top: 60px;
 }
