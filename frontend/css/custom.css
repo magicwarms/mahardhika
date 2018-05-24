@@ -48,6 +48,21 @@ html #header.header-transparent-bottom-border .header-body {
     margin-bottom: 20px !important;
 }
 html section.section-primary {
-    background-color: #b9b9b9 !important;
+    background-color: #ececec !important;
     border-color: #4a4a4a !important;
 }
+p.desc-text {
+    color: #383838 !important;
+    font-size: 16px;
+}
+span.thumb-info-caption.car-rent,span.thumb-info-caption.car-rent h5 {
+    padding-left: 5px;
+    line-height: 30px;
+}
+span.thumb-info-social-icons h5 {
+    margin-bottom: 0;
+    color: #383838 !important;
+}
+
+
+
