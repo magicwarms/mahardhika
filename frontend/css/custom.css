@@ -63,6 +63,16 @@ span.thumb-info-social-icons h5 {
     margin-bottom: 0;
     color: #383838 !important;
 }
+span.thumbnail.mb-0.img-about img {
+    width: 75px;
+    height: 65px;
+}
+#footer{
+    margin-top: 0px;
+}
+section.parallax.section.section-text-light.section-parallax.section-center.mt-0.mb-0 {
+    padding: 150px 0;
+}
 
 
 
