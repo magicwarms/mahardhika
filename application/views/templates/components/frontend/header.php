@@ -53,7 +53,7 @@
 										<nav class="collapse">
 											<ul class="nav nav-pills" id="mainNav">
 											<?php
-							                $menu = array (array('','Home'), array('','About Us'), array('','Car Rent'),array('','Tour Package'),array('','Contact Us'));
+							                $menu = array (array('','Home'), array('about','About Us'), array('','Car Rent'),array('','Tour Package'),array('contact','Contact Us'));
 							                foreach ($menu as $value) {
 							                    $url = $this->uri->segment(1);
 							                    $class = '';
