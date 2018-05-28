@@ -1,15 +1,29 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-    <link rel="stylesheet" href="<?php echo base_url().$this->data['asfront'];?>css/main.css">
-    <link rel="stylesheet" href="<?php echo base_url().$this->data['asfront'];?>css/responsive.css">
 <?php
 if ($plugins == 'home') {
 ?>
-    <link rel="stylesheet" href="<?php echo base_url().$this->data['asfront'];?>css/owl.css">
-    <link rel="stylesheet" href="<?php echo base_url().$this->data['asfront'];?>css/owl.theme.default.min.css">  
+
 <?php
-} elseif ($plugins == 'product-detail') {
+} elseif ($plugins == 'contact_us') {
 ?>
-	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront'];?>css/owl.css">
-    <link rel="stylesheet" href="<?php echo base_url().$this->data['asfront'];?>css/owl.theme.default.min.css">
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/animate/animate.min.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/simple-line-icons/css/simple-line-icons.min.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/owl.carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/owl.carousel/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/magnific-popup/magnific-popup.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>css/theme.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>css/theme-elements.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>css/theme-blog.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>css/theme-shop.css">
+	<!-- Skin CSS -->
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>css/skins/default.css"> 
+	<!-- Theme Custom CSS -->
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>css/custom.css">
+	<!-- Head Libs -->
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/modernizr/modernizr.min.js"></script>
 <?php } ?>
