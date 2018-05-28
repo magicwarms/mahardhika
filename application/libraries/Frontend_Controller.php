@@ -13,28 +13,14 @@ class Frontend_Controller extends MY_Controller{
     	$this->data['emailadmin'] = '';
 	}
 
-	// function mail_config(){
- //        $config['protocol'] = 'smtp';
- //        $config['smtp_host'] = 'mail.mahardhikatransportbatam.com'; 
- //        $config['smtp_port'] = '587'; 
- //        $config['smtp_timeout'] = 30;
- //        $config['smtp_user'] = 'system@mahardhikatransportbatam.com';
- //        $config['smtp_pass'] = 'of9r813lymck';
- //        $config['mailtype'] = 'html';
- //        $config['charset'] = 'iso-8859-1';
- //        $config['wordwrap'] = TRUE;
- //        $config['crlf'] = "\r\n";
- //        $config['newline'] = "\r\n";
- //        return $config;
- //    }
     //sementara pakai ini dulu tuk kirim email
     function mail_config(){
         $config['protocol'] = 'smtp';
-        $config['smtp_host'] = 'mail.codewell.id';
+        $config['smtp_host'] = '';
         $config['smtp_port'] = '587'; 
         $config['smtp_timeout'] = 30;
-        $config['smtp_user'] = 'system@codewell.id';
-        $config['smtp_pass'] = '8gPax)t,jMV*';
+        $config['smtp_user'] = '';
+        $config['smtp_pass'] = '';
         $config['mailtype'] = 'html';
         $config['charset'] = 'iso-8859-1';
         $config['wordwrap'] = TRUE;
