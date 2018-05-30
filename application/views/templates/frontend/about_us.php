@@ -26,7 +26,7 @@
 		                  foreach ($getabout->map as $value_img) { ?>
 							<li>
 								<a title="<?php echo $getabout->title;?>" href="<?php echo $value_img; ?>">
-									<span class="thumbnail mb-0">
+									<span class="thumbnail mb-0 img-about">
 										<img src="<?php echo $value_img; ?>" alt="<?php echo $getabout->title;?>">
 									</span>
 								</a>

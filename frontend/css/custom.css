@@ -73,6 +73,19 @@ span.thumbnail.mb-0.img-about img {
 section.parallax.section.section-text-light.section-parallax.section-center.mt-0.mb-0 {
     padding: 150px 0;
 }
+ul.list.list-inline.list-icons li {
+    display: block;
+    margin-bottom: 0px;
+}
+h4.desc-head {
+    margin: 0 0 0px 0;
+}
+h5.tagline-txt {
+    margin: 0 0 0px 0;
+}
+ul.portfolio-details.list-list {
+    margin: -25px 0 0 0px;
+}
 
 
 
