@@ -48,7 +48,7 @@ html #header.header-transparent-bottom-border .header-body {
     margin-bottom: 20px !important;
 }
 html section.section-primary {
-    background-color: #b9b9b9 !important;
+    background-color: #ececec !important;
     border-color: #4a4a4a !important;
 }
 p.desc-text {
@@ -73,6 +73,7 @@ span.thumbnail.mb-0.img-about img {
 section.parallax.section.section-text-light.section-parallax.section-center.mt-0.mb-0 {
     padding: 150px 0;
 }
+
 ul.list.list-inline.list-icons li {
     display: block;
     margin-bottom: 0px;
