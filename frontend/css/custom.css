@@ -86,6 +86,16 @@ h5.tagline-txt {
 ul.portfolio-details.list-list {
     margin: -25px 0 0 0px;
 }
-
-
+ul.portfolio-details.list-list li {
+    margin: 0 0 0px;
+}
+.portfolio-details .list-icons {
+    margin-left: 14px;
+}
+.row.tour-package li.col-md-6 {
+    float: left;
+}
+.row.tour-package {
+    margin-bottom: 45px;
+}
 
