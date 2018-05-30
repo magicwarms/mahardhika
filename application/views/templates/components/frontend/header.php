@@ -53,14 +53,14 @@
 										<nav class="collapse">
 											<ul class="nav nav-pills" id="mainNav">
 											<?php
-							                $menu = array (array('','Home'), array('about','About Us'), array('rental','Car Rent'),array('','Tour Package'),array('contact','Contact Us'));
+							                $menu = array(array('','Home'), array('about','About Us'), array('rental','Car Rent'),array('','Tour Package'),array('contact','Contact Us'));
 							                foreach ($menu as $value) {
 							                    $url = $this->uri->segment(1);
 							                    $class = '';
 							                    if($url == $value[0])$class = 'active';
 							                ?>
 												<li class="">
-													<a class="nav-link <?php $class;?>" href="<?php echo base_url().$value[0]?>">
+													<a class="nav-link <?php echo $class;?>" href="<?php echo base_url().$value[0]?>">
 														<?php echo $value[1];?>
 													</a>
 												</li>
