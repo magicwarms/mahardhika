@@ -32,6 +32,7 @@ $url = base_url().'mahardhikaadmin/'.$controller.'/'.$actions;
             <thead>
               <tr>
                 <th>No.</th>
+                <th>Thumbnail</th>
                 <th>Judul</th>
                 <th>Deskripsi</th>
                 <th>Created</th>
@@ -42,6 +43,7 @@ $url = base_url().'mahardhikaadmin/'.$controller.'/'.$actions;
             <tfoot>
               <tr>
                 <th>No.</th>
+                <th>Thumbnail</th>
                 <th>Judul</th>
                 <th>Deskripsi</th>
                 <th>Created</th>
@@ -57,19 +59,20 @@ $url = base_url().'mahardhikaadmin/'.$controller.'/'.$actions;
                   ?>
                   <tr>
                     <td><?php echo $key+1; ?></td>
+                    <td><img class="img_thumb" src="<?php echo $about->imageABOUT;?>" alt="<?php echo $about->title;?>"/></td>
                     <td><?php echo $about->title; ?></td>
                     <td><?php echo word_limiter($about->desc, 12); ?></td>
                     <td><?php echo date('d F Y H:i', strtotime($about->created_date));?></td>
                     <td><?php echo date('d F Y H:i', strtotime($about->updated_date));?></td>
                     <?php
-                    $icndel = '&#xE16C;';
-                    $msg1 = 'Are you sure want to delete this data ?';
+                    //$icndel = '&#xE16C;';
+                    //$msg1 = 'Are you sure want to delete this data ?';
                     $msg2 = 'Are you sure want to change this data ?';
-                    $url1 = 'mahardhikaadmin/'.$controller.'/actiondelete_about/'.urlencode($id);
+                    //$url1 = 'mahardhikaadmin/'.$controller.'/actiondelete_about/'.urlencode($id);
                     $url2 = 'mahardhikaadmin/'.$controller.'/index_about/'.urlencode($id);
                     ?>
                     <td class="uk-text-center">
-                      <a href="#" onclick="UIkit.modal.confirm('<?php echo $msg1; ?>', function(){ document.location.href='<?php echo site_url($url1);?>'; });"><i class="md-icon material-icons"><?php echo $icndel; ?></i></a>
+                      <!-- <a href="#" onclick="UIkit.modal.confirm('<?php //echo $msg1; ?>', function(){ document.location.href='<?php //echo site_url($url1);?>'; });"><i class="md-icon material-icons"><?php //echo $icndel; ?></i></a> -->
                       <a href="#" onclick="UIkit.modal.confirm('<?php echo $msg2; ?>', function(){ document.location.href='<?php echo site_url($url2);?>'; });"><i class="md-icon material-icons">&#xE254;</i></a>
                     </td>
                   </tr>
@@ -90,6 +93,23 @@ $url = base_url().'mahardhikaadmin/'.$controller.'/'.$actions;
                   <span class="sub-heading">Silakan masukkan informasi data halaman tentang sesuai form inputan dibawah.</span>
                 </h2>
                 <hr class="md-hr"/>
+                <div class="uk-grid" data-uk-grid-margin>
+                  <div class="uk-width-medium-1-1">Gambar Tentang kami
+                    <?php echo form_upload('imgABOUT[]','','class="md-input" multiple accept="image/png, image/jpg, image/jpeg"');?>
+                    <ul class="img-edit clearfix">
+                      <?php 
+                      if(!empty($getabout->map)){
+                      foreach ($getabout->map as $key=> $value_img) { ?>
+                        <li class="uk-position-relative">
+                            <a href="#" class="uk-modal-close uk-close uk-close-alt uk-position-absolute" onclick="UIkit.modal.confirm('Apakah kamu yakin ingin menghapus gambar ini', function(){ document.location.href='<?php echo base_url().'mahardhikaadmin/'.$controller."/deleteimgabout/".encode($getabout->id).'/'.$getabout->imgs[$key]; ?>'; });"></a>
+                              <img src="<?php echo $value_img; ?>" class="img_medium"/>
+                        </li>
+                        <br>
+                      <?php } ?>
+                      <?php } ?>
+                    </ul>
+                  </div>
+                </div>
                 <div class="uk-grid" data-uk-grid-margin>
                   <div class="uk-width-medium-1-1 uk-margin-top">
                     <div class="parsley-row">
