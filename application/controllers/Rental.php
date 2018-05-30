@@ -5,12 +5,22 @@ class Rental extends Frontend_Controller{
 
 	public function __construct (){
 		parent::__construct();
-		//$this->load->model('About_us_m');
+		$this->load->model('Rental_m');
 	}
 
 	public function index (){
 		$data['addONS'] = 'car_rent';
 
+		$data['listrental'] = $this->Rental_m->selectall_rental()->result();
+		foreach ($data['listrental'] as $key => $value) {
+			$map = directory_map('assets/upload/rental/pic-rental-'.folenc($data['listrental'][$key]->id), FALSE, TRUE);
+			if(!empty($map)){
+				$data['listrental'][$key]->imageRENTAL = base_url() . 'assets/upload/rental/pic-rental-'.folenc($data['listrental'][$key]->id).'/'.$map[0];
+			} else {
+				$data['listrental'][$key]->imageRENTAL = base_url() . 'assets/upload/no-image-available.png';
+			}
+		}
+		
 		if(!empty($this->session->flashdata('message'))) {
             $data['message'] = $this->session->flashdata('message');
         }

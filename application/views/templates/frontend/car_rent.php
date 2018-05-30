@@ -65,206 +65,42 @@
 					<h2><strong>OUR</strong> CAR</h2>
 				</div>
 				<div class="row mb-5 pb-2">
+				<?php 
+              	if(!empty($listrental)){
+                	foreach ($listrental  as $key => $rental) {
+                		if($rental->status == 1){
+		                  $status = '<span class="badge badge-primary badge-md"><strong>Available</strong></span>';
+		                } else {
+		                  $status = '<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>';
+		                }
+                ?>
 					<div class="col-12 col-sm-6 col-lg-4 car-rent mb-4 mb-lg-0">
 						<span class="thumb-info thumb-info-hide-wrapper-bg">
 							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/hiace1000x1000.png" class="img-fluid" alt="">
+								<a href="#">
+									<img src="<?php echo $rental->imageRENTAL;?>" class="img-fluid" alt="<?php echo $rental->name;?>">
 									<span class="thumb-info-title">
-										<span class="thumb-info-inner">HIACE COMMUTER<br>16 Seater</span>
-										<span class="thumb-info-type">2016</span>
+										<span class="thumb-info-inner"><?php echo $rental->name;?></span>
+										<span class="thumb-info-type"><?php echo $rental->year;?></span>
 									</span>
 								</a>
 							</span>
 							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
+								<?php echo $status;?>
+								<p class="desc-text"><strong>Door</strong>: <?php echo $rental->door;?>
+								<br>
+								<strong>Bag</strong>: <?php echo $rental->bag;?><br>
+								<strong>Seats</strong>: <?php echo $rental->seat;?><br>
 								</p>
 								<span class="thumb-info-social-icons">
 									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
+									<a href="<?php echo base_url();?>contact" target="_blank"><button class="btn btn-primary">Call Us</button></a>
 								</span>
 							</span>
 						</span>
 					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent mb-4 mb-lg-0">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/elf-long1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Elf Long<br>19 seater</span>
-										<span class="thumb-info-type">2016</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
-								</span>
-							</span>
-						</span>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent mb-4 mb-sm-0">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/bus1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Bus<br>33 Seater</span>
-										<span class="thumb-info-type">-</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
-								</span>
-							</span>
-						</span>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/avanza1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Avanza</span>
-										<span class="thumb-info-type">2016</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a></a>
-								</span>
-							</span>
-						</span>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent mb-4 mb-sm-0">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/avanza1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Innova reborn</span>
-										<span class="thumb-info-type">2017</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
-								</span>
-							</span>
-						</span>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/rush1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Rush</span>
-										<span class="thumb-info-type">2017</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
-								</span>
-							</span>
-						</span>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent mb-4 mb-sm-0">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/xenia1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Xenia</span>
-										<span class="thumb-info-type">2016</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
-								</span>
-							</span>
-						</span>
-					</div>
-					<div class="col-12 col-sm-6 col-lg-4 car-rent">
-						<span class="thumb-info thumb-info-hide-wrapper-bg">
-							<span class="thumb-info-wrapper">
-								<a href="about-me.html">
-									<img src="<?php echo base_url().$this->data['asfront']; ?>img/car/coaster1000x1000.png" class="img-fluid" alt="">
-									<span class="thumb-info-title">
-										<span class="thumb-info-inner">Coaster<br>24 Seat</span>
-										<span class="thumb-info-type">-</span>
-									</span>
-								</a>
-							</span>
-							<span class="thumb-info-caption car-rent">
-								<span class="badge badge-primary badge-md"><strong>Available</strong></span>
-								<span class="badge badge-warning badge-md"><strong>Not Available</strong></span>
-								<p class="desc-text"><strong>Door</strong>: 4<br>
-													 <strong>Bag</strong>: 2 Big 1 Small<br>
-													 <strong>Seats</strong>: 6<br>
-								</p>
-								<span class="thumb-info-social-icons">
-									<h5><strong>RATES</strong></h5>
-									<a href="contact-us.html"><button class="btn btn-primary" data-toggle="modal" data-target="#smallModal">Call Us</button></a>
-								</span>
-							</span>
-						</span>
-					</div>
+					<?php } ?>
+				<?php } ?>
 				</div>
 			</div>
 		</div>

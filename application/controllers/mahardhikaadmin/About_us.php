@@ -133,6 +133,11 @@ class About_us extends Admin_Controller {
 		    unlink($file); //delete file
 		}
 
+		$path = 'assets/upload/about/pic-about-'.folenc($id);
+		if(is_dir($path)){
+			rmdir($path);
+		}
+
 		if($id != 0){
 			$this->About_us_m->delete($id);
 			$data = array(
@@ -153,12 +158,15 @@ class About_us extends Admin_Controller {
 		}
 	}
 
-	public function deleteimgabout($id1=NULL, $id2=NULL){
+	public function deleteimgabout($id1, $id2){
 		if($id1 != NULL){
 			$id = decode(urldecode($id1));
 			unlink('assets/upload/about/pic-about-'.folenc($id).'/'.$id2);
 		}
-
+		$path = 'assets/upload/about/pic-about-'.folenc($id);
+		if(is_dir($path)){
+			rmdir($path);
+		}
 		$data = array(
             'title' => 'Sukses',
             'text' => 'Penghapusan Gambar berhasil dilakukan',

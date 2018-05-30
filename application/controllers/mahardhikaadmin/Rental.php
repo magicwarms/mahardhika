@@ -20,7 +20,6 @@ class Rental extends Admin_Controller {
 			} else {
 				$data['listrental'][$key]->imageRENTAL = base_url() . 'assets/upload/no-image-available.png';
 			}
-
 		}
 
 		if($id == NULL){
@@ -49,18 +48,19 @@ class Rental extends Admin_Controller {
             $data['message'] = $this->session->flashdata('message');
         }
 
-		$data['subview'] = $this->load->view($this->data['backendDIR'].'about_us', $data, TRUE);
+		$data['subview'] = $this->load->view($this->data['backendDIR'].'rental', $data, TRUE);
 		$this->load->view('templates/_layout_base',$data);
 	}
 
 	public function saverental() {
-		$rules = $this->Rental_m->rules_about;
+		$rules = $this->Rental_m->rules_rental;
 		$this->form_validation->set_rules($rules);
 		$this->form_validation->set_message('required', 'Form %s tidak boleh dikosongkan');
         $this->form_validation->set_message('trim', 'Form %s adalah Trim');
 
 		if ($this->form_validation->run() == TRUE) {
-			$data = $this->Rental_m->array_from_post(array('title','desc'));
+			$data = $this->Rental_m->array_from_post(array('name','year','door','bag','seat','status'));
+			if($data['status'] == 'on')$data['status']=1;else $data['status']=0;
 			$id = decode(urldecode($this->input->post('id')));
 
 			if(empty($id))$id=NULL;
@@ -68,12 +68,10 @@ class Rental extends Admin_Controller {
 			$idsave = $this->Rental_m->save($data, $id);
 
 			$subject = $idsave;
-			$filenamesubject = 'pic-about-'.folenc($subject);
+			$filenamesubject = 'pic-rental-'.folenc($subject);
 
-			if(!empty($_FILES['imgABOUT']['name'][0])){
-				$number_of_files = sizeof($_FILES['imgABOUT']['tmp_name']);
-				$files = $_FILES['imgABOUT'];
-				$path = 'assets/upload/about/'.$filenamesubject;
+			if(!empty($_FILES['imgRENTAL']['name'][0])) {
+				$path = 'assets/upload/rental/'.$filenamesubject;
 				if (!file_exists($path)){
 	            	mkdir($path, 0777, true);
 	        	}
@@ -82,22 +80,12 @@ class Rental extends Admin_Controller {
 	            $config['allowed_types']	= 'jpg|png|jpeg';
 	            $config['file_name']        = $this->security->sanitize_filename($filenamesubject);
 
-	            for ($i = 0; $i < $number_of_files; $i++) {
-			        $_FILES['imgABOUT']['name'] = $files['name'][$i];
-			        $_FILES['imgABOUT']['type'] = $files['type'][$i];
-			        $_FILES['imgABOUT']['tmp_name'] = $files['tmp_name'][$i];
-			        $_FILES['imgABOUT']['error'] = $files['error'][$i];
-			        $_FILES['imgABOUT']['size'] = $files['size'][$i];
-			        //now we initialize the upload library
-			        $this->upload->initialize($config);
-			        // we retrieve the number of files that were uploaded
-			        if ($this->upload->do_upload('imgABOUT')){
-			          $data['uploads'][$i] = $this->upload->data();
-			        }else{
-			          $data['upload_errors'][$i] = $this->upload->display_errors();
-			        }
-			    }
-	    	}
+		        $this->upload->initialize($config);
+
+		        if ($this->upload->do_upload('imgRENTAL')){
+		        	$data['uploads'] = $this->upload->data();
+		        }
+		    }
 
 		  	$data = array(
             	'title' => 'Sukses',
@@ -105,7 +93,7 @@ class Rental extends Admin_Controller {
                 'type' => 'success'
           	);
 	    	$this->session->set_flashdata('message', $data);
-	  		redirect('mahardhikaadmin/about_us/index_about');
+	  		redirect('mahardhikaadmin/rental/index_rental');
 
 		} else {
 			
@@ -115,19 +103,21 @@ class Rental extends Admin_Controller {
 	            'type' => 'warning'
 	        );
 	        $this->session->set_flashdata('message',$data);
-	        $this->index_about();
+	        $this->index_rental();
 		}
 	}
 
-	public function actiondelete_about($id=NULL){
+	public function actiondelete_rental($id=NULL){
 		$id = decode(urldecode($id));
-
 		$files = glob('assets/upload/rental/pic-rental-'.folenc($id).'/*'); //get all file names
 		foreach($files as $file){
 		    if(is_file($file))
 		    unlink($file); //delete file
 		}
-
+		$path = 'assets/upload/rental/pic-rental-'.folenc($id);
+		if(is_dir($path)){
+			rmdir($path);
+		}
 		if($id != 0){
 			$this->Rental_m->delete($id);
 			$data = array(
@@ -136,7 +126,7 @@ class Rental extends Admin_Controller {
                     'type' => 'success'
                 );
                 $this->session->set_flashdata('message',$data);
-                redirect('mahardhikaadmin/about_us/index_about');
+                redirect('mahardhikaadmin/rental/index_rental');
 		}else{
 			$data = array(
 	            'title' => 'Terjadi Kesalahan',
@@ -144,23 +134,29 @@ class Rental extends Admin_Controller {
 	            'type' => 'error'
 		        );
 		        $this->session->set_flashdata('message',$data);
-		        redirect('mahardhikaadmin/about_us/index_about');
+		        redirect('mahardhikaadmin/rental/index_rental');
 		}
 	}
 
-	public function deleteimgabout($id1=NULL, $id2=NULL){
-		if($id1 != NULL){
-			$id = decode(urldecode($id1));
-			unlink('assets/upload/rental/pic-rental-'.folenc($id).'/'.$id2);
+	public function deleteimgrental($id){
+		if($id != NULL){
+			$ids = decode(urldecode($id));
+			$map = directory_map('assets/upload/rental/pic-rental-'.folenc($ids), FALSE, TRUE);
+			$path = 'assets/upload/rental/pic-rental-'.folenc($ids);
+			foreach ($map as $value) {
+				unlink('assets/upload/rental/pic-rental-'.folenc($ids).'/'.$value);
+			}
+			if(is_dir($path)){
+				rmdir($path);
+			}
 		}
-
 		$data = array(
             'title' => 'Sukses',
             'text' => 'Penghapusan Gambar berhasil dilakukan',
             'type' => 'success'
         );
         $this->session->set_flashdata('message',$data);
-		redirect('mahardhikaadmin/about_us/index_about/'.$id1);
+		redirect('mahardhikaadmin/rental/index_rental/'.$id);
 	}
 
 }
