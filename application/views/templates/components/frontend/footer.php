@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');?>
-	<footer id="footer">
+	<footer id="footer" style="margin-top: 10px;">
 		<div class="container">
 			<div class="row">
 				<div class="footer-ribbon">

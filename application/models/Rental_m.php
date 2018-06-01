@@ -20,12 +20,12 @@ class Rental_m extends MY_Model{
 		'year' => array(
 			'field' => 'year', 
 			'label' => 'Tahun Mobil', 
-			'rules' => 'trim|required|is_numeric'
+			'rules' => 'trim|required|numeric'
 		),
 		'door' => array(
 			'field' => 'door', 
 			'label' => 'Jumlah Pintu Mobil', 
-			'rules' => 'trim|required|is_numeric'
+			'rules' => 'trim|required|numeric'
 		),
 		'bag' => array(
 			'field' => 'bag', 
@@ -35,7 +35,7 @@ class Rental_m extends MY_Model{
 		'seat' => array(
 			'field' => 'seat', 
 			'label' => 'Jumlah seat Mobil', 
-			'rules' => 'trim|required|is_numeric'
+			'rules' => 'trim|required|numeric'
 		)
 	);
 

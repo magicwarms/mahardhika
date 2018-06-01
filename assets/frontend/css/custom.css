@@ -73,7 +73,6 @@ span.thumbnail.mb-0.img-about img {
 section.parallax.section.section-text-light.section-parallax.section-center.mt-0.mb-0 {
     padding: 150px 0;
 }
-
 ul.list.list-inline.list-icons li {
     display: block;
     margin-bottom: 0px;
@@ -87,3 +86,16 @@ h5.tagline-txt {
 ul.portfolio-details.list-list {
     margin: -25px 0 0 0px;
 }
+ul.portfolio-details.list-list li {
+    margin: 0 0 0px;
+}
+.portfolio-details .list-icons {
+    margin-left: 14px;
+}
+.row.tour-package li.col-md-6 {
+    float: left;
+}
+.row.tour-package {
+    margin-bottom: 45px;
+}
+

@@ -215,6 +215,83 @@ altair_form_adv = {
     }
 };
 </script>
+<?php
+} elseif($plugins == 'plugins_tour') {
+?>
+    
+<?php echo $datatables;?>
+<?php echo $forms_advanced;?>
+<?php echo $forms_validation;?>
+<!-- tinymce -->
+<script src="<?php echo base_url().$this->data['asbackbower']; ?>tinymce/tinymce.min.js"></script>
+<script>
+    $(function() {
+    altair_wysiwyg._tinymce();
+    altair_wysiwyg._tinymce_second();
+    altair_wysiwyg._tinymce_third();
+});
+
+// wysiwyg editors
+altair_wysiwyg = {
+    _tinymce: function() {
+        var $tinymce = '#wysiwyg_tinymces';
+        if($($tinymce).length) {
+            tinymce.init({
+                skin_url: '<?php echo base_url().$this->data['asback']; ?>skins/tinymce/material_design',
+                selector: "#wysiwyg_tinymces",
+                content_css: 'https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+                noneditable_noneditable_class: 'fa',
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor fontawesome noneditable",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image fontawesome",
+                extended_valid_elements: 'span[*]'
+            });
+            
+        }
+    },
+    _tinymce_second: function() {
+        var $tinymce = '#wysiwyg_tinymces_second';
+        if($($tinymce).length) {
+            tinymce.init({
+                skin_url: '<?php echo base_url().$this->data['asback']; ?>skins/tinymce/material_design',
+                selector: "#wysiwyg_tinymces_second",
+                content_css: 'https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+                noneditable_noneditable_class: 'fa',
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor fontawesome noneditable",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image fontawesome",
+                extended_valid_elements: 'span[*]'
+            });
+            
+        }
+    },
+    _tinymce_third: function() {
+        var $tinymce = '#wysiwyg_tinymces_third';
+        if($($tinymce).length) {
+            tinymce.init({
+                skin_url: '<?php echo base_url().$this->data['asback']; ?>skins/tinymce/material_design',
+                selector: "#wysiwyg_tinymces_third",
+                content_css: 'https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+                noneditable_noneditable_class: 'fa',
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor fontawesome noneditable",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image fontawesome",
+                extended_valid_elements: 'span[*]'
+            });
+            
+        }
+    }
+};
+</script>
 
 <?php                   
 }
