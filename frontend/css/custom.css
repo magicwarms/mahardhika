@@ -98,4 +98,11 @@ ul.portfolio-details.list-list li {
 .row.tour-package {
     margin-bottom: 45px;
 }
+span.thumb-info-caption.promo h4 {
+    margin: 0;
+    line-height: 22px;
+}
+.row.promo {
+    margin-bottom: 15px;
+
 
