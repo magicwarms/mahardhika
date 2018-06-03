@@ -15,6 +15,12 @@
 <?php
 if ($plugins == 'home') {
 ?>
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/magnific-popup/magnific-popup.min.css">
+	<!-- Current Page CSS -->
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/rs-plugin/css/layers.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/rs-plugin/css/navigation.css">
+	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/circle-flip-slideshow/css/component.css">
 <?php } elseif ($plugins == 'about_us') { ?>
 	<link rel="stylesheet" href="<?php echo base_url().$this->data['asfront']; ?>vendor/magnific-popup/magnific-popup.min.css">
 <?php } elseif ($plugins == 'car_rent') { ?>

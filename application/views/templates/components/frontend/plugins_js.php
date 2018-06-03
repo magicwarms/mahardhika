@@ -16,6 +16,20 @@
 	<script src="<?php echo base_url().$this->data['asfront']; ?>js/theme.init.js"></script>
 <?php
 if ($plugins == 'home') { ?>
+	
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/isotope/jquery.isotope.min.js"></script>
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/vide/vide.min.js"></script>
+	<!-- Current Page Vendor and Views -->
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="<?php echo base_url().$this->data['asfront']; ?>vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+	<script src="<?php echo base_url().$this->data['asfront']; ?>js/views/view.home.js"></script>
+	<!-- examples -->
+	<script src="<?php echo base_url().$this->data['asfront']; ?>js/examples/examples.gallery.js"></script>
+	<!-- Examples -->
+	<script src="<?php echo base_url().$this->data['asfront']; ?>js/examples/examples.demos.js"></script>
 
 <?php } elseif ($plugins == 'contact_us') { ?>
 	<!-- Vendor -->

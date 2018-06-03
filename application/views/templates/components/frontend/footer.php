@@ -1,37 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');?>
-	<footer id="footer" style="margin-top: 10px;">
+	<footer id="footer">
 		<div class="container">
 			<div class="row">
 				<div class="footer-ribbon">
 					<span>Get in Touch</span>
-				</div>
-				<div class="col-lg-3">
-					<div class="newsletter">
-						<h4>Newsletter</h4>
-						<p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-
-						<div class="alert alert-success d-none" id="newsletterSuccess">
-							<strong>Success!</strong> You've been added to our email list.
-						</div>
-
-						<div class="alert alert-danger d-none" id="newsletterError"></div>
-
-						<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
-							<div class="input-group">
-								<input class="form-control form-control-sm" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
-								<span class="input-group-btn">
-									<button class="btn btn-light" type="submit">Go!</button>
-								</span>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<h4>Latest Tweets</h4>
-					<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options="{'username': '', 'count': 2}">
-						<p>Please wait...</p>
-					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="contact-details">
@@ -58,20 +31,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
 				<div class="row">
 					<div class="col-lg-1">
 						<a href="" class="logo">
-							<img alt="Porto Website Template" class="img-fluid" src="<?php echo base_url().$this->data['asfront']; ?>img/logo-footer.png">
+							<img alt="Mahardhika Logo" class="img-fluid" src="<?php echo base_url().$this->data['asfront']; ?>img/logo-footer.png">
 						</a>
 					</div>
 					<div class="col-lg-7">
 						<p>© Copyright 2018. All Rights Reserved.</p>
-					</div>
-					<div class="col-lg-4">
-						<nav id="sub-menu">
-							<ul>
-								<li><a href="page-faq.html">FAQ's</a></li>
-								<li><a href="sitemap.html">Sitemap</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
-							</ul>
-						</nav>
 					</div>
 				</div>
 			</div>
