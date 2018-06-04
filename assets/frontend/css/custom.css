@@ -108,4 +108,10 @@ span.thumb-info-caption.promo h4 {
 span.thumb-info.thumb-info-hide-wrapper-bg.our-promo {
     text-align: center;
 }
-
+.img-thumbnail {
+    padding: 1.25rem;
+}
+.section-text-light .testimonial.testimonial .testimonial-author span, 
+.section-text-light .testimonial.testimonial .testimonial-author strong {
+    color: #000000;
+}
