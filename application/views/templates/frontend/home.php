@@ -114,6 +114,28 @@
 			<div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
 				<span class="thumb-info thumb-info-hide-wrapper-bg">
 					<span class="thumb-info-wrapper">
+						<img src="frontend/img/tour-package/hiace&elf.png" class="img-fluid" alt="">
+						<span class="thumb-info-title">
+							<span class="thumb-info-inner">HIACE / ISUZU ELF</span>
+							<span class="thumb-info-type">16 seater / 19 seater</span>
+						</span>
+					</span>
+					<span class="thumb-info-caption">
+						<span class="thumb-info-caption-text">
+							<h5><strong>CITY TOUR ( DALAM KOTA MAX 12 JAM )</strong></h5>
+							<p><strong>IDR 800.000 / Tour<br>
+							   IDR 80.000/ PAX<br>
+							   MIN : 10 PAX<br>
+							   MAX : 17 PAX</strong></p></span>
+						<span class="thumb-info-social-icons">
+							<button type="button" class="mb-1 mt-1 mr-1 btn btn-primary"><i class="fa fa-arrow-circle-right"></i> More Information</button>
+						</span>
+					</span>
+				</span>
+			</div>
+			<div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+				<span class="thumb-info thumb-info-hide-wrapper-bg">
+					<span class="thumb-info-wrapper">
 						<img src="<?php echo $tour->imageTOUR;?>" class="img-fluid" alt="<?php echo $tour->title;?>">
 						<span class="thumb-info-title">
 							<span class="thumb-info-inner"><?php echo $tour->title;?></span>
@@ -143,6 +165,21 @@
 			if(!empty($listpromo)){
 				foreach ($listpromo as $promo) {
 		?>
+			<div class="col-sm-4 col-lg-3 mb-4 mb-lg-0">
+				<span class="thumb-info thumb-info-hide-wrapper-bg our-promo">
+					<span class="thumb-info-wrapper">
+						<img src="frontend/img/car/xenia.png" class="img-fluid" alt="">
+					</span>
+					<span class="thumb-info-caption promo">
+						<span class="thumb-info-caption-text" style="text-align: center;">
+							<h4><strong>Promo Akhir Tahun</strong></h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. </p>
+						</span>
+					   	<a href="detail-page.html"> <button type="button" class="mb-1 mt-1 mr-1 btn btn-primary"><i class="fa fa-arrow-circle-right"></i> More...</button></a>
+					</span>
+				</span>
+			</div>
 			<div class="col-sm-4 col-lg-3 mb-4 mb-lg-0">
 				<span class="thumb-info thumb-info-hide-wrapper-bg">
 					<span class="thumb-info-wrapper">
