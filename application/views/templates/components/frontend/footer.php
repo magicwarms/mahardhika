@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
 				<div class="row">
 					<div class="col-lg-1">
 						<a href="" class="logo">
-							<img alt="Mahardhika Logo" class="img-fluid" src="<?php echo base_url().$this->data['asfront']; ?>img/logo-footer.png">
+							<img alt="Mahardhika Logo" class="img-fluid" src="<?php echo base_url().$this->data['asfront']; ?>img/logomtb.png">
 						</a>
 					</div>
 					<div class="col-lg-7">

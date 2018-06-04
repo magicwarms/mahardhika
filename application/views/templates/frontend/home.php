@@ -127,7 +127,7 @@
 							   MIN : <?php echo $tour->min_tour;?> PAX<br>
 							   MAX : <?php echo $tour->max_tour;?> PAX</strong></p></span>
 						<span>
-							<a href="<?php echo base_url();?>tour" class="mb-1 mt-1 mr-1 btn btn-primary"><i class="fa fa-arrow-circle-right"></i> More Information</a>
+							<a href="<?php echo base_url();?>tour" class="btn btn-primary"><i class="fa fa-arrow-circle-right"></i> More Information</a>
 						</span>
 					</span>
 				</span>
@@ -153,7 +153,7 @@
 							<h4><strong><?php echo $promo->title;?></strong></h4>
 							<?php echo $promo->desc;?>
 						</span>
-					   	<!-- <button type="button" class="mb-1 mt-1 mr-1 btn btn-primary"><i class="fa fa-arrow-circle-right"></i> More Information</button> -->
+					   	<a href="<?php echo base_url();?>promo" class="btn btn-primary"><i class="fa fa-arrow-circle-right"></i> More Information</a>
 					</span>
 				</span>
 			</div>

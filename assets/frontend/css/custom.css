@@ -24,7 +24,7 @@ section.section.section-with-mockup {
     margin-top: 60px;
 }
 #header .header-body{
-	background: #fff0;
+    background: #fff0;
 }
 html #header.header-semi-transparent .header-nav-main nav > ul > li > a.active {
     color: none;
@@ -33,7 +33,7 @@ html #header.header-semi-transparent .header-nav-main nav > ul > li > a.active {
     color: none;
 }
 #header .header-nav-main nav > ul > li > a.active{
-	color: none;
+    color: none;
 }
 #header .header-nav-main nav > ul > li > a.active {
     background: none;
@@ -104,5 +104,8 @@ span.thumb-info-caption.promo h4 {
 }
 .row.promo {
     margin-bottom: 15px;
-
+}
+span.thumb-info.thumb-info-hide-wrapper-bg.our-promo {
+    text-align: center;
+}
 

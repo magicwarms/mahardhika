@@ -41,7 +41,7 @@
 							<div class="header-row">
 								<div class="header-logo">
 									<a href="">
-										<img alt="Porto" width="82" height="40" src="<?php echo base_url().$this->data['asfront']; ?>img/logo-default-slim-dark.png">
+										<img alt="Porto" width="82" height="40" src="<?php echo base_url().$this->data['asfront']; ?>img/logomtbwhite.png">
 									</a>
 								</div>
 							</div>
