@@ -17,7 +17,7 @@
 
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="Porto - Responsive HTML5 Template">
-	<meta name="author" content="okler.net">
+	<meta name="author" content="Andhana Utama">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="<?php echo base_url().$this->data['asfront']; ?>img/favicon.ico" type="image/x-icon" />
