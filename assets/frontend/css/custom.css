@@ -115,3 +115,10 @@ span.thumb-info.thumb-info-hide-wrapper-bg.our-promo {
 .section-text-light .testimonial.testimonial .testimonial-author strong {
     color: #000000;
 }
+.list.list-icons.list-icons-style-3 li {
+    padding-top: 0px;
+    padding-left: 36px;
+}
+.list li {
+    margin-bottom: -18px;
+}

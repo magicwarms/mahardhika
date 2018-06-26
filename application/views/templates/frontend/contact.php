@@ -52,21 +52,20 @@
 			</div>
 			<div class="col-lg-6">
 
-				<h4 class="heading-primary mt-4">Get in <strong>Touch</strong></h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<!-- <h4 class="heading-primary mt-4">Get in <strong>Touch</strong></h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
 				<hr>
 				<h4 class="heading-primary">The <strong>Office</strong></h4>
 				<ul class="list list-icons list-icons-style-3 mt-4">
-					<li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</li>
-					<li><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-789</li>
-					<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+					<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> Taman Sari Hijau Block A1 No 23</p></li>
+					<li><p><i class="fa fa-phone"></i> <strong>Contact Person.1:</strong><br> (+62) 821 731 841 43 (Vita) <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(+62) 822 840 717 65 (Whatsapp)</p></li>
+					<li><p><i class="fa fa-phone"></i> <strong>Contact Person.2:</strong><br> (+62) 813 642 086 15 (Joko/Whatsapp)</p></li>
+					<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
 				</ul>
 				<hr>
 				<h4 class="heading-primary">Business <strong>Hours</strong></h4>
 				<ul class="list list-icons list-dark mt-4">
-					<li><i class="fa fa-clock-o"></i> Monday - Friday - 9am to 5pm</li>
-					<li><i class="fa fa-clock-o"></i> Saturday - 9am to 2pm</li>
-					<li><i class="fa fa-clock-o"></i> Sunday - Closed</li>
+					<li><h3><i class="fa fa-clock-o"></i> <strong>24</strong> Hours</h3></li>
 				</ul>
 			</div>
 		</div>
