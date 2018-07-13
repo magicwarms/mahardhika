@@ -15,8 +15,8 @@
 	?>
 	<title><?php echo $uri;?> | Mahardhika Transport Batam</title>	
 
-	<meta name="keywords" content="HTML5 Template" />
-	<meta name="description" content="Porto - Responsive HTML5 Template">
+	<meta name="keywords" content="Mahardhika Transport Batam" />
+	<meta name="description" content="Mahardhika Transport Batam, jasa rental mobil yang terpercaya serta memberikan keramahan kepada anda">
 	<meta name="author" content="Andhana Utama">
 
 	<!-- Favicon -->

@@ -58,9 +58,9 @@
 				<h4 class="heading-primary">The <strong>Office</strong></h4>
 				<ul class="list list-icons list-icons-style-3 mt-4">
 					<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> Taman Sari Hijau Block A1 No 23</p></li>
-					<li><p><i class="fa fa-phone"></i> <strong>Contact Person.1:</strong><br> (+62) 821 731 841 43 (Vita) <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(+62) 822 840 717 65 (Whatsapp)</p></li>
+					<li><p><i class="fa fa-phone"></i> <strong>Contact Person.1:</strong><br> (+62) 821 731 841 43 (Vita) <br>(+62) 822 840 717 65 (Whatsapp)</p></li>
 					<li><p><i class="fa fa-phone"></i> <strong>Contact Person.2:</strong><br> (+62) 813 642 086 15 (Joko/Whatsapp)</p></li>
-					<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+					<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <br> <a href="#">elvita@mahardhikatransportbatam.com</a><br><a href="#">joko.santoso@mahardhikatransportbatam.com</a></p></li>
 				</ul>
 				<hr>
 				<h4 class="heading-primary">Business <strong>Hours</strong></h4>
