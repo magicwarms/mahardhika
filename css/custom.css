@@ -1,1 +1,16 @@
 /* Add here all your CSS customizations */
+img.pict-testi {
+    border-radius: 100em;
+    /*opacity: 0.5;*/
+    border-top: 5px solid #cf2031;
+    border-right: 5px solid #0f7dc8;
+    border-bottom: 5px solid #2eb31a;
+    border-left: 5px solid #eab823;
+    width: 160px;
+    height: 160px;
+}
+.testimonial.testimonial-style-5 .testimonial-author {
+    padding: 0 0 0;
+    margin: 0 0 0;
+    border-top: 1px solid #f2f2f2;
+}
