@@ -24,8 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?>
 						<li class="social-icons-instagram"><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 				</div>
-				<a href="http://www.facebook.com/share.php?u=http://mahardhikatransportbatam.com/
-					mahardika-transport-batam-jasa-rental-mobil-terpercaya-dibatam" target="_blank">
+				<a href="http://www.facebook.com/share.php?u=http://mahardhikatransportbatam.com/" target="_blank">
 				    <img src="../mahardhika/assets/frontend/img/Facebook-share-button.png" width="160" height="55">
 				</a>
 			</div>
